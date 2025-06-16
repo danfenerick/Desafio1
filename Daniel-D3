@@ -1,0 +1,68 @@
+// Daniel Desafio peças de Xadrez
+
+#include <stdio.h>
+
+int main () {
+
+    int move, i, j, k, l;
+
+    do {
+    printf("Escolha a peça:\n");
+    printf("1. Torre\n");
+    printf("2. Bispo\n");
+    printf("3. Rainha\n");
+    printf("4. Cavalo\n");
+    scanf("%d", &move);
+
+
+    if (move < 1 || move > 4) {
+        printf("Opção inválida. Tente novamente.\n\n");
+    }
+
+} while (move < 1 || move > 4);
+
+    switch (move){
+        case 1:
+            //Mover a torre 5 casas para a direita
+            for (i = 0; i < 5; i++){
+            printf("Torre se move: Direita\n");
+            }
+        break;
+        case 2:    
+            // Mover o bispo 5 casas na diagonal
+            j = 0;
+            while (j < 5){
+            printf("Bispo se move Cima, Direita\n");
+            j++;
+            }
+        break;
+        case 3:    
+            // Mover a Rainha 8 casas para a esquerda
+            k = 0;
+            do {
+                printf("Rainha se move para a esquerda\n");
+                k++;
+            }while (k < 8);
+            
+            break;
+
+        case 4:
+            // Mover o cavalo Baixo, Baixo, Esquerda
+            l = 0;
+            do {
+                for (l = 0; l < 3; l++) {
+                    printf("Cavalo se move Baixo, Baixo, Esquerda\n");
+                }
+
+            } while (l < 3);
+            break;
+
+        default:
+            printf("Opção inválida\n");
+    }
+
+
+
+    return 0;
+
+}
